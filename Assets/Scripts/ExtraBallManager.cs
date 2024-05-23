@@ -24,6 +24,31 @@ public class ExtraBallManager : MonoBehaviour
 
     void Update()
     {
-        
+        numberOfBallsText.text= "" + (numberOfExtraBalls+1);
+        if (ballController.currentBallState== BallController.ballState.fire)
+        {
+            if (numberOfBallsToFire > 0)
+            {
+                ballWaitTimeSeconds -= Time.deltaTime;
+                if (ballWaitTimeSeconds <= 0)
+                {
+                    GameObject ball = objectPool.GetPooledObject("Extra Ball");
+                    if(ball != null )
+                    {
+                        ball.transform.position = ballController.ballLaunchPosition;
+                        ball.SetActive(true);
+                        gameManager.ballsInScene.Add(ball);
+                        ball.GetComponent<Rigidbody2D>().velocity = ballController.tempVelocity;
+                        ballWaitTimeSeconds += ballWaitTime;
+                        numberOfBallsToFire--;
+                        
+
+                    }
+                    ballWaitTimeSeconds = ballWaitTime;
+                }
+            }
+        }
+        if (ballController.currentBallState == BallController.ballState.endShot);
+        numberOfBallsToFire = numberOfExtraBalls;
     }
 }

@@ -17,6 +17,8 @@ public class BallController : MonoBehaviour
     public Rigidbody2D ball;
     private Vector2 mouseStartPosition;
     private Vector2 mouseEndPosition;
+    public Vector2 tempVelocity;
+    public Vector3 ballLaunchPosition;
     private float ballVelocityX;
     private float ballVelocityY;
     public float constantSpeed;
@@ -26,6 +28,7 @@ public class BallController : MonoBehaviour
     {
         gameManager = FindAnyObjectByType<GameManager>();
         currentBallState = ballState.aim;
+        gameManager.ballsInScene.Add(this.gameObject);
     }
 
     void Update()
@@ -113,13 +116,14 @@ public class BallController : MonoBehaviour
         mouseEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         ballVelocityX = (mouseStartPosition.x - mouseEndPosition.x);
         ballVelocityY = (mouseStartPosition.y - mouseEndPosition.y);
-        Vector2 tempVelocity= new Vector2 (ballVelocityX, ballVelocityY).normalized;
+        tempVelocity= new Vector2 (ballVelocityX, ballVelocityY).normalized;
         ball.velocity = constantSpeed*tempVelocity;
         //eðer ekrana boþ týklanýrsa (ki bu durumda ekranda hiç bir açý olmayacaðýndan fýrlatma açýsý oluþmayacak ve fýrlatma gerçekleþmeyecek) döngüyü tekrarlamasýný saðlayan koþul
         if (ball.velocity == Vector2.zero )
         {
             return;
         }
+        ballLaunchPosition = transform.position;
         currentBallState = ballState.fire;
 
     }

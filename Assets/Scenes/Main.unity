@@ -1515,6 +1515,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentBallState: 0
   ball: {fileID: 1506257250}
+  tempVelocity: {x: 0, y: 0}
+  ballLaunchPosition: {x: 0, y: 0, z: 0}
   constantSpeed: 14
   arrow: {fileID: 2018264651}
 --- !u!1 &1683890756
@@ -2002,8 +2004,8 @@ MonoBehaviour:
   squareBrick: {fileID: 5395340464761087319, guid: 70d45a591128b1a48944105daf7edfe6, type: 3}
   triangleBrick: {fileID: 1154619447837893812, guid: 108b7bc9dbde1884391cda411d8a8ec0, type: 3}
   extraBallPowerUp: {fileID: 3409177311920133955, guid: e98a1fad71ca0374da1ceeb5f5368274, type: 3}
-  numberOfBricksToStart: 6
-  level: 5
+  numberOfBricksToStart: 4
+  level: 0
   bricksInScene: []
   ballsInScene: []
   numberOfExtraBallsInRow: 0
@@ -2022,7 +2024,7 @@ MonoBehaviour:
   ballWaitTime: 0.1
   numberOfExtraBalls: 0
   numberOfBallsToFire: 0
-  objectPool: {fileID: 0}
+  objectPool: {fileID: 266587489}
   numberOfBallsText: {fileID: 1179932235}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

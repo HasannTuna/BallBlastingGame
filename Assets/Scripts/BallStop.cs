@@ -6,11 +6,12 @@ public class BallStop : MonoBehaviour
 {
     public Rigidbody2D ball;
     public BallController ballControl;
+    private GameManager gameManager;
 
 
     void Start()
     {
-        
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -29,6 +30,10 @@ public class BallStop : MonoBehaviour
             //topu atkif hale getir
             ballControl.currentBallState = BallController.ballState.wait;
 
+        }
+        if (other.gameObject.tag =="Extra Ball")
+        {
+            gameManager.ballsInScene.Remove(other.gameObject);
         }
     }
 }
