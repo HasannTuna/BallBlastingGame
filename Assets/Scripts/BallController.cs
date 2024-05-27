@@ -24,7 +24,7 @@ public class BallController : MonoBehaviour
     private GameManager gameManager;
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
         currentBallState = ballState.aim;
     }
 

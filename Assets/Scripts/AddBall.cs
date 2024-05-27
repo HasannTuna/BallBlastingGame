@@ -17,7 +17,7 @@ public class AddBall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.gameObject.tag == "Ball") ;
+        if (other.gameObject.tag == "Ball")
         {
             //top eklemeyi çalýþtýr
             this.gameObject.SetActive(false);
