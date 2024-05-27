@@ -27,9 +27,10 @@ public class BallController : MonoBehaviour
     void Start()
     {
         
-        gameManager = FindAnyObjectByType<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
         currentBallState = ballState.aim;
         gameManager.ballsInScene.Add(this.gameObject);
+
     }
 
     void Update()

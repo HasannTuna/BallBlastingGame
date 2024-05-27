@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        objectPool=FindAnyObjectByType<ObjectPool>();
+        objectPool=FindObjectOfType<ObjectPool>();
         level = 1;
         int numberOfBricksCreated = 0;
         for (int i = 0; i < spawnPoints.Length; i++)

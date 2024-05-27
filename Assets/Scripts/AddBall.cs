@@ -7,7 +7,7 @@ public class AddBall : MonoBehaviour
     private ExtraBallManager extraBallManager;
     void Start()
     {
-        extraBallManager = FindAnyObjectByType<ExtraBallManager>();
+        extraBallManager = FindObjectOfType<ExtraBallManager>();
     }
 
     void Update()
