@@ -38,8 +38,8 @@ public class ExtraBallManager : MonoBehaviour
                         ball.transform.position = ballController.ballLaunchPosition;
                         ball.SetActive(true);
                         gameManager.ballsInScene.Add(ball);
-                        ball.GetComponent<Rigidbody2D>().velocity = ballController.tempVelocity;
-                        ballWaitTimeSeconds += ballWaitTime;
+                        ball.GetComponent<Rigidbody2D>().velocity = 12*ballController.tempVelocity;
+                        ballWaitTimeSeconds = ballWaitTime;
                         numberOfBallsToFire--;
                         
 
@@ -49,6 +49,9 @@ public class ExtraBallManager : MonoBehaviour
             }
         }
         if (ballController.currentBallState == BallController.ballState.endShot);
-        numberOfBallsToFire = numberOfExtraBalls;
+        {
+            numberOfBallsToFire = numberOfExtraBalls;
+        }
+       
     }
 }

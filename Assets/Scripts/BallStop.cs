@@ -34,6 +34,7 @@ public class BallStop : MonoBehaviour
         if (other.gameObject.tag =="Extra Ball")
         {
             gameManager.ballsInScene.Remove(other.gameObject);
+            other.gameObject.SetActive(false);
         }
     }
 }

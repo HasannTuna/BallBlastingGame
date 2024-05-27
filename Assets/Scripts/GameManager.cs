@@ -29,21 +29,20 @@ public class GameManager : MonoBehaviour
                 int brickToCreate = Random.Range(0, 4);
                 if (brickToCreate == 0)
                 {
-                    bricksInScene.Add(Instantiate(squareBrick, spawnPoints[i].position, Quaternion.identity));
+                    bricksInScene.Add(Instantiate(squareBrick, spawnPoints [i].position, Quaternion.identity));
                    
                 }
                 else if (brickToCreate == 1)
                 {
-                    bricksInScene.Add(Instantiate(triangleBrick, spawnPoints[i].position, Quaternion.identity));
+                    bricksInScene.Add(Instantiate(triangleBrick, spawnPoints [i].position, Quaternion.identity));
                    
                 }
-                else if (brickToCreate == 2 && numberOfExtraBallsInRow==0)
+               else if (brickToCreate == 2 && numberOfExtraBallsInRow==0)
                 {
                     bricksInScene.Add(Instantiate(extraBallPowerUp, spawnPoints[i].position, Quaternion.identity));
                     numberOfExtraBallsInRow++;
 
-
-            }
+                }
             numberOfExtraBallsInRow = 0;
 
         }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9143845505737364901}
   - component: {fileID: 8258150683116831237}
   - component: {fileID: -5021979010871528824}
+  - component: {fileID: 8017974989867716736}
   m_Layer: 0
   m_Name: Extra Ball Powerup
   m_TagString: Untagged
@@ -130,7 +131,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3409177311920133955}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -148,7 +149,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &-5021979010871528824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +162,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f700dc1f2b0034885df0b36b76d57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8017974989867716736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409177311920133955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb2b4e69bce41647a567cd4e43e6c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0

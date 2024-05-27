@@ -34,7 +34,7 @@ public class BrickHealthManager : MonoBehaviour
     }
     void OnCollisionExit2D(Collision2D other)
     {
-        if(other.gameObject.tag =="Ball") 
+        if(other.gameObject.tag =="Ball" || other.gameObject.tag =="Extra Ball") 
         {
             TakeDamage(1);
                 

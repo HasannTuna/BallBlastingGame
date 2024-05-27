@@ -26,6 +26,7 @@ public class BallController : MonoBehaviour
     private GameManager gameManager;
     void Start()
     {
+        
         gameManager = FindAnyObjectByType<GameManager>();
         currentBallState = ballState.aim;
         gameManager.ballsInScene.Add(this.gameObject);
@@ -59,18 +60,22 @@ public class BallController : MonoBehaviour
                 break;
 
             case ballState.wait:
-                currentBallState = ballState.endShot;
+                //currentBallState = ballState.endShot;
+                if (gameManager.ballsInScene.Count == 1)
+                {
+                    currentBallState = ballState.endShot;
+                }
                 break;
 
             case ballState.endShot:
-                
+             
                 for(int i = 0; i < gameManager.bricksInScene.Count;i++)
                 {
                     gameManager.bricksInScene[i].GetComponent<BrickMovementController>().currentState = BrickMovementController.brickState.move;
                 }
                 gameManager.PlaceBricks();
                 currentBallState= ballState.aim;
-                break;
+            break;
 
 
 

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AddBall : MonoBehaviour
 {
+    private ExtraBallManager extraBallManager;
     void Start()
     {
-        
+        extraBallManager = FindAnyObjectByType<ExtraBallManager>();
     }
 
     void Update()
@@ -14,12 +15,13 @@ public class AddBall : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.gameObject.tag == "Ball") ;
+        if (other.gameObject.tag == "Ball" || other.gameObject.tag == "Extra Ball") 
         {
             //top eklemeyi çalýþtýr
+            extraBallManager.numberOfExtraBalls++;
             this.gameObject.SetActive(false);
         }
     }
