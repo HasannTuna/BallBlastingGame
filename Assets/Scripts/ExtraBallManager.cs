@@ -13,8 +13,16 @@ public class ExtraBallManager : MonoBehaviour
     public ObjectPool objectPool;
     public Text numberOfBallsText;
     void Start()
-    {
-        ballController= FindObjectOfType<BallController>();
+    {// Layer indexlerini alýn
+        int Ball = LayerMask.NameToLayer("Ball");
+        int Ball1 = LayerMask.NameToLayer("Ball");
+
+        // Bu iki layer'ýn çarpýþmasýný engelle
+        Physics2D.IgnoreLayerCollision(Ball, Ball1);
+
+
+
+        ballController = FindObjectOfType<BallController>();
         gameManager= FindObjectOfType<GameManager>();
         ballWaitTimeSeconds = ballWaitTime;
         numberOfExtraBalls = 0;
@@ -48,7 +56,7 @@ public class ExtraBallManager : MonoBehaviour
                 }
             }
         }
-        if (ballController.currentBallState == BallController.ballState.endShot);
+        if (ballController.currentBallState == BallController.ballState.endShot)
         {
             numberOfBallsToFire = numberOfExtraBalls;
         }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7005397008571476330}
   - component: {fileID: 3799188627078879740}
   - component: {fileID: -4657739744111193543}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Extra Ball
   m_TagString: Extra Ball
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7806897285120439116}
   - component: {fileID: 6736259991275398420}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -17,6 +17,12 @@ public class BrickHealthManager : MonoBehaviour
         brickHealthText = GetComponentInChildren<Text>();
     }
 
+
+    void OnEnable()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+        brickHealth = gameManager.level;
+    }
     
     void Update()
     {

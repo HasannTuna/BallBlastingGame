@@ -26,7 +26,13 @@ public class BallController : MonoBehaviour
     private GameManager gameManager;
     void Start()
     {
-        
+        // Layer indexlerini alýn
+        int Ball = LayerMask.NameToLayer("Ball");
+        int Ball1 = LayerMask.NameToLayer("Ball");
+
+        // Bu iki layer'ýn çarpýþmasýný engelle
+        Physics2D.IgnoreLayerCollision(Ball, Ball1);
+
         gameManager = FindObjectOfType<GameManager>();
         currentBallState = ballState.aim;
         gameManager.ballsInScene.Add(this.gameObject);

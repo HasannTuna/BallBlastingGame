@@ -244,7 +244,7 @@ MonoBehaviour:
     objectToPool: {fileID: 5395340464761087319, guid: 70d45a591128b1a48944105daf7edfe6, type: 3}
   - amountToPool: 40
     objectToPool: {fileID: 1154619447837893812, guid: 108b7bc9dbde1884391cda411d8a8ec0, type: 3}
-  - amountToPool: 40
+  - amountToPool: 20
     objectToPool: {fileID: 3409177311920133955, guid: e98a1fad71ca0374da1ceeb5f5368274, type: 3}
   - amountToPool: 50
     objectToPool: {fileID: 3143710696730283875, guid: 63879057bad003c47ba46cc082ddfbbd, type: 3}
@@ -1368,7 +1368,7 @@ GameObject:
   - component: {fileID: 1506257251}
   - component: {fileID: 1506257250}
   - component: {fileID: 1506257254}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -1800,7 +1800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2018264652}
   - component: {fileID: 2018264653}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
