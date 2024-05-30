@@ -33,7 +33,7 @@ public class ExtraBallManager : MonoBehaviour
     void Update()
     {
         numberOfBallsText.text= "" + (numberOfExtraBalls+1);
-        if (ballController.currentBallState== BallController.ballState.fire)
+        if (ballController.currentBallState== BallController.ballState.fire || ballController.currentBallState == BallController.ballState.wait)
         {
             if (numberOfBallsToFire > 0)
             {

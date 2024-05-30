@@ -14,14 +14,16 @@ public class BrickMovementController : MonoBehaviour
     public brickState currentState;
     private bool hasMoved;
 
-    void OnEnable()
-    {
-        currentState = brickState.stop;
-    }
+   
     void Start()
     {
         hasMoved = false;
         currentState = brickState.stop; 
+    }
+    private void OnEnable()
+    {
+        hasMoved = false;
+        currentState = brickState.stop;
     }
 
     void Update()

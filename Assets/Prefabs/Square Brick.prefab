@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8339021c51d57429ce6eac7df7b57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brickDestroyParticle: {fileID: 2620187434956903558, guid: 8f14192f25ee377499189a035bb26d6d, type: 3}
   brickHealth: 10
 --- !u!61 &4633976095166333052
 BoxCollider2D:
