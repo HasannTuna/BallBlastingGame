@@ -8,12 +8,12 @@ public class BrickHealthManager : MonoBehaviour
     public int brickHealth;
     private Text brickHealthText;
     private GameManager gameManager;
+    private ScoreManager score;
     void Start()
     {
+        score = FindObjectOfType<ScoreManager>();
         gameManager = FindObjectOfType<GameManager>();
-       
         brickHealth = gameManager.level;
-
         brickHealthText = GetComponentInChildren<Text>();
     }
 
@@ -29,6 +29,7 @@ public class BrickHealthManager : MonoBehaviour
         brickHealthText.text = "" + brickHealth;
         if(brickHealth<=0 )
         {
+            score.IncreaseScore();
             this.gameObject.SetActive(false);
             
             //Þekilleri yok etme kýsmý

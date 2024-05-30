@@ -11,7 +11,8 @@ public class BallController : MonoBehaviour
         aim,
         fire,
         wait,
-        endShot
+        endShot,
+        endGame
     }
     public ballState currentBallState;
     public Rigidbody2D ball;
@@ -84,7 +85,9 @@ public class BallController : MonoBehaviour
                 currentBallState= ballState.aim;
             break;
 
-
+            case ballState.endGame:
+                
+            break;
 
             default:
                 

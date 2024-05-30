@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
         objectPool=FindObjectOfType<ObjectPool>();
         level = 1;
-        int numberOfBricksCreated = 0;
+        //int numberOfBricksCreated = 0;
         for (int i = 0; i < spawnPoints.Length; i++)
         {
          //toplar bir adet geldiði zaman fonksiyonu durdurmasýný ekle
