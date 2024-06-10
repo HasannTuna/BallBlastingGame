@@ -9,6 +9,7 @@ TagManager:
   - Triangle Brick
   - Extra Ball
   - Extra Ball Powerup
+  - PauseButton
   layers:
   - Default
   - TransparentFX

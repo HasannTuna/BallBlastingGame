@@ -47,7 +47,7 @@ public class BrickHealthManager : MonoBehaviour
     {
         if(other.gameObject.tag =="Ball" || other.gameObject.tag =="Extra Ball") 
         {
-            sound.ballHit.Play();
+           // sound.ballHit.Play();
             TakeDamage(1);
                 
         }
